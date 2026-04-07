@@ -1,4 +1,5 @@
 <p [hidden]="hidden">my-app-auth works!</p>
+<input type="text" [(ngModel)]="name" placeholder="Enter your name">
 <h1 [style.color]="colors">{{name}}</h1>
 <button (click)="toggle()">toggle</button>
 <button (click)="changeColor()">change color</button>
@@ -12,4 +13,14 @@
     <mat-label>Leave a comment</mat-label>
     <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
   </mat-form-field>
+
+
+<p>template form</p>
+<form (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input [(ngModel)]="name" required #nameRef="ngModel">
+  <p *ngIf="nameRef.invalid">Name required</p>
+  <button type="submit">Submit</button>
+</form>
+
 </form>
