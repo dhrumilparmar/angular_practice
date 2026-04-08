@@ -21,6 +21,4 @@ onSubmit() {
   const formData = this.loginForm.value;
   console.log(formData);
 }
-
-
 }
