@@ -7,6 +7,25 @@
   <p>{{ user.price | currency }}</p>
   <p>{{ user.date | date }}</p>
 }
--->
+
 
 <ng-content></ng-content>
+
+<button (click)="toggle()">Toggle Loading</button>
+
+<div *ngIf="!isloading; else loading">
+  <p>Content loaded successfully!</p>
+</div>
+
+<ng-container *ngIf="true">
+  <p>Hello</p>
+</ng-container>
+
+<input #inputRef>
+<button (click)="print(inputRef.value)">Show</button>
+
+@defer {
+    <app-form-practice></app-form-practice>
+}
+-->
+
