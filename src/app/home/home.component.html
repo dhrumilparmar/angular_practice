@@ -29,3 +29,12 @@
 }
 -->
 
+<div>
+  <input [(ngModel)]="name" placeholder="Type to bind value...">
+  <button (click)="toggle2()">Toggle Active Class</button>
+  <button (click)="toggleColor()">Change Color</button>
+</div>
+
+<p [ngClass]="{ active: isActive }">Bound Value: {{ name }}</p>
+<p [ngStyle]="{ color: isRed ? 'red' : 'blue' }">{{name}}</p>
+<button (click)="sendProfileData()"> send Profile</button>

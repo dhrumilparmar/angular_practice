@@ -21,7 +21,8 @@
 
 <!-- Commented out so it doesn't push the routed components out of view -->
 <!-- <app-form-practice></app-form-practice> -->
-<!-- <app-home>
+<app-home (sendProfile)="gotProfile($event)">
 <p>Welcome to the Home Page! i am pased form parent to child component</p>
-</app-home>-->
+</app-home>
+
 <router-outlet></router-outlet>

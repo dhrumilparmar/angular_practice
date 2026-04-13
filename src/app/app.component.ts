@@ -25,4 +25,7 @@ import { AboutComponent } from './about/about.component';
 })
 export class AppComponent {
   title = 'my_app';
+  gotProfile(profile: any) {
+    console.log(profile);
+  }
 }
